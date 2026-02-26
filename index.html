@@ -3,60 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taxi Tam Kỳ 24/7 - 0904 000 047</title>
-<meta name="description" content="Taxi Tam Kỳ 24/7 - Chuyên tuyến Tam Kỳ đi Đà Nẵng, Núi Thành, Tiên Phước. Giá rẻ - Xe đời mới - Gọi ngay 0904 000 047">
+
+<title>Taxi Tam Kỳ 24/7 | 0904 000 047 | Taxi Tam Kỳ Đi Đà Nẵng Giá Rẻ</title>
+
+<meta name="description" content="Taxi Tam Kỳ 24/7 chuyên tuyến Tam Kỳ đi Đà Nẵng, Núi Thành, Tiên Phước. Xe 4 chỗ đời mới. Giá rẻ. Gọi ngay 0904 000 047">
+<meta name="keywords" content="Taxi Tam Kỳ, Taxi Tam Kỳ đi Đà Nẵng, Taxi Tam Kỳ giá rẻ, Taxi Quảng Nam">
+<meta name="author" content="Taxi Tam Kỳ 24/7">
+
+<!-- Google Ads Tracking (dán mã của anh vào đây nếu có) -->
+<!-- Global site tag (gtag.js) - Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-XXXXXXX');
+</script>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#111;
+background:#0f0f0f;
 color:white;
+scroll-behavior:smooth;
 }
 
 header{
-background:linear-gradient(90deg,#000,#222);
-padding:20px;
+background:url('https://images.unsplash.com/photo-1550355291-bbee04a92027') center/cover no-repeat;
+padding:120px 20px;
 text-align:center;
+position:relative;
+}
+
+header::after{
+content:'';
+position:absolute;
+top:0;left:0;right:0;bottom:0;
+background:rgba(0,0,0,0.6);
 }
 
 header h1{
+position:relative;
 color:#FFD700;
-margin:0;
-font-size:28px;
-}
-
-.call-btn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#FFD700;
-color:black;
-padding:15px 20px;
-border-radius:50px;
-font-weight:bold;
-text-decoration:none;
-box-shadow:0 0 15px #FFD700;
-z-index:999;
+font-size:34px;
+z-index:2;
+animation:fadeIn 2s ease;
 }
 
 .section{
-padding:40px 20px;
+padding:60px 20px;
 text-align:center;
+animation:fadeUp 1.5s ease;
 }
 
 .price-box{
 background:#1a1a1a;
 padding:20px;
-margin:15px auto;
+margin:20px auto;
 max-width:400px;
 border-radius:15px;
 border:1px solid #FFD700;
+transition:0.3s;
+}
+
+.price-box:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #FFD700;
 }
 
 .price-box h3{
 color:#FFD700;
-margin-bottom:10px;
 }
 
 .review{
@@ -87,6 +104,11 @@ padding:15px;
 width:100%;
 border-radius:10px;
 font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#e6c200;
 }
 
 iframe{
@@ -94,18 +116,48 @@ width:100%;
 height:300px;
 border-radius:15px;
 }
+
+.call-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#FFD700;
+color:black;
+padding:15px 20px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 15px #FFD700;
+animation:pulse 1.5s infinite;
+z-index:999;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>🚖 TAXI TAM KỲ 24/7</h1>
-<p>Gọi ngay: <b style="color:#FFD700;">0904 000 047</b></p>
+<h1>🚖 TAXI TAM KỲ 24/7<br>📞 0904 000 047</h1>
 </header>
 
 <div class="section">
-<h2>BẢNG GIÁ XE 4 CHỖ</h2>
+<h2>🔥 BẢNG GIÁ XE 4 CHỖ</h2>
 
 <div class="price-box">
 <h3>Tam Kỳ → Đà Nẵng</h3>
@@ -133,13 +185,13 @@ border-radius:15px;
 <h2>⭐ KHÁCH HÀNG ĐÁNH GIÁ</h2>
 
 <div class="review">
-<p>⭐⭐⭐⭐⭐</p>
-<p>Xe sạch sẽ, tài xế nhiệt tình. - Anh Minh</p>
+⭐⭐⭐⭐⭐<br>
+Xe sạch sẽ, đúng giờ, tài xế nhiệt tình.
 </div>
 
 <div class="review">
-<p>⭐⭐⭐⭐⭐</p>
-<p>Giá đúng như báo, không phát sinh. - Chị Lan</p>
+⭐⭐⭐⭐⭐<br>
+Giá đúng như báo, không phát sinh chi phí.
 </div>
 
 </div>
@@ -147,21 +199,20 @@ border-radius:15px;
 <div class="section">
 <h2>🚗 ĐẶT XE NHANH</h2>
 
-<form>
-<input type="text" placeholder="Họ tên">
-<input type="tel" placeholder="Số điện thoại">
-<textarea placeholder="Điểm đón - Điểm đến"></textarea>
+<form onsubmit="alert('Cảm ơn anh/chị, tài xế sẽ liên hệ ngay!'); return false;">
+<input type="text" placeholder="Họ tên" required>
+<input type="tel" placeholder="Số điện thoại" required>
+<textarea placeholder="Điểm đón - Điểm đến" required></textarea>
 <button type="submit">GỬI YÊU CẦU</button>
 </form>
 
 </div>
 
 <div class="section">
-<h2>📍 VỊ TRÍ TAM KỲ</h2>
+<h2>📍 KHU VỰC HOẠT ĐỘNG</h2>
+<p>Phục vụ Tam Kỳ - Đà Nẵng - Núi Thành - Tiên Phước - Quảng Nam</p>
 
-<iframe 
-src="https://www.google.com/maps?q=Tam+Kỳ,+Quảng+Nam&output=embed">
-</iframe>
+<iframe src="https://www.google.com/maps?q=Tam+Kỳ,+Quảng+Nam&output=embed"></iframe>
 
 </div>
 
