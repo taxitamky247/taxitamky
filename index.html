@@ -3,65 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taxi Tam Kỳ 24/7 | 0904 000 047</title>
+<meta name="description" content="Taxi Tam Kỳ 24/7 chuyên Tam Kỳ đi Đà Nẵng, Núi Thành, Tiên Phước. Xe 4 chỗ đời mới. Gọi ngay 0904 000 047">
 
-<title>Taxi Tam Kỳ 24/7 | 0904 000 047 | Taxi Tam Kỳ Đi Đà Nẵng Giá Rẻ</title>
-
-<meta name="description" content="Taxi Tam Kỳ 24/7 chuyên tuyến Tam Kỳ đi Đà Nẵng, Núi Thành, Tiên Phước. Xe 4 chỗ đời mới. Giá rẻ. Gọi ngay 0904 000 047">
-<meta name="keywords" content="Taxi Tam Kỳ, Taxi Tam Kỳ đi Đà Nẵng, Taxi Tam Kỳ giá rẻ, Taxi Quảng Nam">
-<meta name="author" content="Taxi Tam Kỳ 24/7">
-
-<!-- Google Ads Tracking (dán mã của anh vào đây nếu có) -->
-<!-- Global site tag (gtag.js) - Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-XXXXXXX');
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
 body{
-margin:0;
-font-family:Arial;
-background:#0f0f0f;
+background:#0d0d0d;
 color:white;
 scroll-behavior:smooth;
 }
 
-header{
-background:url('https://images.unsplash.com/photo-1550355291-bbee04a92027') center/cover no-repeat;
-padding:120px 20px;
-text-align:center;
-position:relative;
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(0,0,0,0.8);
+transition:0.3s;
+z-index:1000;
+border-bottom:1px solid transparent;
 }
 
-header::after{
-content:'';
-position:absolute;
-top:0;left:0;right:0;bottom:0;
-background:rgba(0,0,0,0.6);
+nav.scrolled{
+padding:10px 40px;
+background:#000;
+border-bottom:1px solid #FFD700;
 }
 
-header h1{
-position:relative;
+nav .logo{
 color:#FFD700;
-font-size:34px;
-z-index:2;
-animation:fadeIn 2s ease;
+font-weight:700;
+font-size:22px;
 }
 
-.section{
-padding:60px 20px;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:600;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#FFD700;
+}
+
+/* MARQUEE */
+.marquee{
+margin-top:80px;
+background:#FFD700;
+color:black;
+padding:10px;
+overflow:hidden;
+white-space:nowrap;
+font-weight:600;
+}
+
+.marquee span{
+display:inline-block;
+padding-left:100%;
+animation:marquee 12s linear infinite;
+}
+
+@keyframes marquee{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+/* SLIDER */
+.slider{
+position:relative;
+height:500px;
+overflow:hidden;
+}
+
+.slides{
+display:flex;
+width:300%;
+animation:slide 15s infinite;
+}
+
+.slides img{
+width:100%;
+height:500px;
+object-fit:cover;
+}
+
+@keyframes slide{
+0%{margin-left:0;}
+30%{margin-left:0;}
+35%{margin-left:-100%;}
+65%{margin-left:-100%;}
+70%{margin-left:-200%;}
+100%{margin-left:-200%;}
+}
+
+/* TEXT OVER SLIDE */
+.slide-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
 text-align:center;
-animation:fadeUp 1.5s ease;
 }
 
+.slide-text h1{
+font-size:40px;
+color:#FFD700;
+text-shadow:0 0 15px black;
+}
+
+.slide-text p{
+font-size:20px;
+margin-top:15px;
+}
+
+/* SECTION */
+.section{
+padding:80px 20px;
+text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.section h2{
+color:#FFD700;
+margin-bottom:40px;
+font-size:28px;
+}
+
+/* PRICE */
 .price-box{
 background:#1a1a1a;
-padding:20px;
+padding:25px;
 margin:20px auto;
-max-width:400px;
+max-width:420px;
 border-radius:15px;
 border:1px solid #FFD700;
 transition:0.3s;
@@ -72,64 +162,19 @@ transform:scale(1.05);
 box-shadow:0 0 20px #FFD700;
 }
 
-.price-box h3{
-color:#FFD700;
-}
-
-.review{
-background:#222;
-padding:20px;
-margin:15px auto;
-max-width:500px;
-border-radius:15px;
-}
-
-form{
-max-width:500px;
-margin:auto;
-}
-
-input,textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:8px;
-border:none;
-}
-
-button{
-background:#FFD700;
-border:none;
-padding:15px;
-width:100%;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-}
-
-button:hover{
-background:#e6c200;
-}
-
-iframe{
-width:100%;
-height:300px;
-border-radius:15px;
-}
-
+/* CALL BUTTON */
 .call-btn{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
 background:#FFD700;
 color:black;
-padding:15px 20px;
+padding:15px 25px;
 border-radius:50px;
-font-weight:bold;
+font-weight:700;
 text-decoration:none;
 box-shadow:0 0 15px #FFD700;
 animation:pulse 1.5s infinite;
-z-index:999;
 }
 
 @keyframes pulse{
@@ -138,26 +183,39 @@ z-index:999;
 100%{transform:scale(1);}
 }
 
-@keyframes fadeIn{
-from{opacity:0;}
-to{opacity:1;}
-}
-
-@keyframes fadeUp{
-from{opacity:0; transform:translateY(30px);}
-to{opacity:1; transform:translateY(0);}
-}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>🚖 TAXI TAM KỲ 24/7<br>📞 0904 000 047</h1>
-</header>
+<nav id="navbar">
+<div class="logo">🚖 TAXI TAM KỲ</div>
+<div>
+<a href="#">Trang Chủ</a>
+<a href="#gia">Bảng Giá</a>
+<a href="#lienhe">Liên Hệ</a>
+</div>
+</nav>
 
-<div class="section">
-<h2>🔥 BẢNG GIÁ XE 4 CHỖ</h2>
+<div class="marquee">
+<span>Taxi Tam Kỳ 24/7 - Xe đời mới - Giá trọn gói - Gọi ngay 0904 000 047</span>
+</div>
+
+<div class="slider">
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
+</div>
+
+<div class="slide-text">
+<h1>Taxi Tam Kỳ 24/7</h1>
+<p>Phục vụ Tam Kỳ - Đà Nẵng - Quảng Nam</p>
+</div>
+</div>
+
+<div class="section" id="gia">
+<h2>BẢNG GIÁ XE 4 CHỖ</h2>
 
 <div class="price-box">
 <h3>Tam Kỳ → Đà Nẵng</h3>
@@ -181,42 +239,35 @@ to{opacity:1; transform:translateY(0);}
 
 </div>
 
-<div class="section">
-<h2>⭐ KHÁCH HÀNG ĐÁNH GIÁ</h2>
-
-<div class="review">
-⭐⭐⭐⭐⭐<br>
-Xe sạch sẽ, đúng giờ, tài xế nhiệt tình.
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐<br>
-Giá đúng như báo, không phát sinh chi phí.
-</div>
-
-</div>
-
-<div class="section">
-<h2>🚗 ĐẶT XE NHANH</h2>
-
-<form onsubmit="alert('Cảm ơn anh/chị, tài xế sẽ liên hệ ngay!'); return false;">
-<input type="text" placeholder="Họ tên" required>
-<input type="tel" placeholder="Số điện thoại" required>
-<textarea placeholder="Điểm đón - Điểm đến" required></textarea>
-<button type="submit">GỬI YÊU CẦU</button>
-</form>
-
-</div>
-
-<div class="section">
-<h2>📍 KHU VỰC HOẠT ĐỘNG</h2>
-<p>Phục vụ Tam Kỳ - Đà Nẵng - Núi Thành - Tiên Phước - Quảng Nam</p>
-
-<iframe src="https://www.google.com/maps?q=Tam+Kỳ,+Quảng+Nam&output=embed"></iframe>
-
+<div class="section" id="lienhe">
+<h2>Liên Hệ Đặt Xe</h2>
+<p>📞 0904 000 047</p>
+<p>Phục vụ Tam Kỳ - Đà Nẵng - Quảng Nam</p>
 </div>
 
 <a href="tel:0904000047" class="call-btn">📞 GỌI NGAY</a>
+
+<script>
+window.addEventListener("scroll", function(){
+let nav=document.getElementById("navbar");
+if(window.scrollY>50){
+nav.classList.add("scrolled");
+}else{
+nav.classList.remove("scrolled");
+}
+});
+
+const sections=document.querySelectorAll(".section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top=window.scrollY;
+const offset=sec.offsetTop-400;
+if(top>offset){
+sec.classList.add("show");
+}
+});
+});
+</script>
 
 </body>
 </html>
