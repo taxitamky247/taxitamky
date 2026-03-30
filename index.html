@@ -9,21 +9,15 @@
 <meta name="description" content="Taxi Tam Kỳ đi Đà Nẵng giá rẻ, gọi 0904000047 có xe ngay">
 
 <style>
-
-/* NỀN TAXI ĐÊM */
 body {
     margin: 0;
     font-family: Arial;
     color: white;
     text-align: center;
-
     background: 
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
     url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
-
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 /* HEADER */
@@ -31,10 +25,7 @@ body {
     padding: 20px;
     border-bottom: 2px solid gold;
 }
-
-.header h1 {
-    color: gold;
-}
+.header h1 { color: gold; }
 
 /* BUTTON */
 .btn {
@@ -46,94 +37,54 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
-
 .call {
     background: gold;
     color: black;
     animation: rung 0.7s infinite;
 }
+.zalo { background: #0084ff; }
 
-.zalo {
-    background: #0084ff;
-}
-
-/* RUNG */
 @keyframes rung {
-    0% {transform: rotate(0);}
     25% {transform: rotate(5deg);}
     50% {transform: rotate(-5deg);}
-    75% {transform: rotate(5deg);}
-    100% {transform: rotate(0);}
+}
+
+/* SECTION */
+.section {
+    padding: 20px;
+}
+
+/* PRICE */
+.price-box {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid gold;
+}
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+.hot {
+    background: gold;
+    color: black;
+    border-radius: 8px;
 }
 
 /* FORM */
 .form {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 400px;
     background: rgba(0,0,0,0.6);
     padding: 15px;
     border-radius: 10px;
 }
-
 input {
     width: 90%;
     padding: 10px;
     margin: 5px;
-    border-radius: 5px;
-    border: none;
-}
-
-/* BẢNG GIÁ */
-.price-box {
-    margin: 30px auto;
-    width: 90%;
-    max-width: 500px;
-    background: rgba(0,0,0,0.7);
-    border-radius: 15px;
-    padding: 20px;
-    border: 2px solid gold;
-    box-shadow: 0 0 25px rgba(255,215,0,0.4);
-}
-
-.price-box h2 {
-    color: gold;
-}
-
-.price-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 14px;
-    border-bottom: 1px solid #333;
-}
-
-.price-item:hover {
-    background: rgba(255,255,255,0.05);
-}
-
-/* HOT */
-.hot {
-    background: linear-gradient(90deg, gold, orange);
-    color: black;
-    font-weight: bold;
-    border-radius: 10px;
-    animation: glow 1.2s infinite alternate;
-}
-
-@keyframes glow {
-    from { box-shadow: 0 0 10px gold; }
-    to { box-shadow: 0 0 25px orange; }
-}
-
-/* SALE */
-.sale {
-    color: #00ffcc;
-    font-weight: bold;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    50% { opacity: 0.5; }
 }
 
 /* FLOAT */
@@ -142,120 +93,82 @@ input {
     bottom: 20px;
     right: 20px;
 }
-
 .float a {
     display: block;
-    margin-top: 10px;
-    padding: 16px;
-    border-radius: 50%;
-    font-size: 20px;
-}
-
-.float-call {
-    background: red;
-    animation: rung 0.8s infinite;
-}
-
-/* POPUP */
-.popup {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: gold;
-    color: black;
     padding: 15px;
-    display: none;
-    font-weight: bold;
+    border-radius: 50%;
+    background: red;
+    margin-top: 10px;
 }
 
 /* NOTI */
 .noti {
     position: fixed;
     bottom: 90px;
-    left: 15px;
-    background: rgba(0,0,0,0.85);
-    padding: 12px;
-    border-radius: 10px;
+    left: 10px;
+    background: black;
+    padding: 10px;
     display: none;
-    border-left: 4px solid gold;
 }
 
 /* VIEWER */
 .viewer {
     position: fixed;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
     background: red;
-    padding: 8px 12px;
+    padding: 8px;
     border-radius: 20px;
-    font-size: 13px;
-    animation: pulse 1s infinite;
 }
-
-@keyframes pulse {
-    50% {transform: scale(1.1);}
-}
-
 </style>
 </head>
 
 <body>
 
 <div class="header">
-    <h1>🚖 TAXI TAM KỲ - QUẢNG NAM</h1>
+    <h1>🚖 TAXI TAM KỲ</h1>
     <p>Xe Quay Đầu Tam Kỳ ⇆ Đà Nẵng</p>
 </div>
 
-<h2>📞 Gọi là có xe sau 5 phút</h2>
+<h2 id="goi">📞 Gọi là có xe sau 5 phút</h2>
 
 <a href="tel:0904000047" class="btn call">📞 Gọi ngay</a>
 <a href="https://zalo.me/0904000047" class="btn zalo">💬 Zalo</a>
 
+<!-- DỊCH VỤ -->
+<div class="section" id="danang">
+    <h2>🚗 Taxi Tam Kỳ Đi Đà Nẵng</h2>
+    <p>Xe riêng – Không ghép – Có xe ngay</p>
+</div>
+
 <!-- FORM -->
-<div class="form">
+<div class="section form" id="datxe">
     <h3>📩 Đặt xe nhanh</h3>
-    <input type="text" id="name" placeholder="Tên">
-    <input type="text" id="phone" placeholder="SĐT">
-    <button class="btn call" onclick="sendZalo()">Gửi</button>
+    <input id="name" placeholder="Tên">
+    <input id="phone" placeholder="SĐT">
+    <button onclick="sendZalo()">Gửi</button>
 </div>
 
 <!-- BẢNG GIÁ -->
-<div class="price-box">
+<div class="price-box" id="banggia">
     <h2>💰 BẢNG GIÁ</h2>
-
-    <div class="price-item">
-        <span>25km</span>
-        <b>300K</b>
-    </div>
-
-    <div class="price-item hot">
-        <span>30km 🔥 HOT</span>
-        <b>350K</b>
-    </div>
-
+    <div class="price-item"><span>25km</span><b>300K</b></div>
+    <div class="price-item hot"><span>30km 🔥 HOT</span><b>350K</b></div>
     <div class="price-item"><span>35km</span><b>400K</b></div>
     <div class="price-item"><span>40km</span><b>450K</b></div>
     <div class="price-item"><span>45km</span><b>500K</b></div>
     <div class="price-item"><span>50km</span><b>550K</b></div>
     <div class="price-item"><span>60km</span><b>600K</b></div>
-
-    <p class="sale">🔥 Giảm 50K hôm nay - liên hệ 0904.000.47</p>
 </div>
 
 <!-- MAP -->
-<div style="margin:20px">
+<div class="section">
 <iframe src="https://maps.google.com/maps?q=Tam%20Ky&z=13&output=embed" width="90%" height="250"></iframe>
 </div>
 
 <!-- FLOAT -->
 <div class="float">
-    <a href="tel:0904000047" class="float-call">📞</a>
-</div>
-
-<!-- POPUP -->
-<div class="popup" id="popup">
-🔥 Ưu đãi 50K - Gọi ngay!
+<a href="tel:0904000047">📞</a>
 </div>
 
 <!-- NOTI -->
@@ -263,49 +176,31 @@ input {
 
 <!-- VIEWER -->
 <div class="viewer">
-👀 <span id="viewer-count">15</span> đang xem
+👀 <span id="viewer-count">15</span>
 </div>
 
 <script>
-
 function sendZalo(){
-    var name = document.getElementById("name").value;
-    var phone = document.getElementById("phone").value;
-    var text = "Đặt xe: " + name + " - " + phone;
-    window.open("https://zalo.me/0904000047?text=" + encodeURIComponent(text));
+    var name=document.getElementById("name").value;
+    var phone=document.getElementById("phone").value;
+    window.open("https://zalo.me/0904000047?text="+name+"-"+phone);
 }
-
-// popup
-setTimeout(function(){
-    document.getElementById("popup").style.display = "block";
-}, 4000);
 
 // fake khách
-var names = ["Anh Tuấn","Chị Lan","Anh Nam","Anh Hùng"];
-var places = ["Tam Kỳ → Đà Nẵng","Tam Kỳ → Hội An"];
-
+var names=["Anh Nam","Chị Lan","Anh Tuấn"];
 function showNoti(){
-    var name = names[Math.floor(Math.random()*names.length)];
-    var place = places[Math.floor(Math.random()*places.length)];
-    var time = Math.floor(Math.random()*5)+1;
-
-    var noti = document.getElementById("noti");
-    noti.innerHTML = "💬 "+name+" vừa đặt "+place+" ("+time+" phút trước)";
-    noti.style.display="block";
-
-    setTimeout(()=>{noti.style.display="none"},4000);
+    var n=names[Math.floor(Math.random()*names.length)];
+    var el=document.getElementById("noti");
+    el.innerHTML="💬 "+n+" vừa đặt xe";
+    el.style.display="block";
+    setTimeout(()=>el.style.display="none",3000);
 }
-
-setTimeout(()=>{
-    showNoti();
-    setInterval(showNoti,7000);
-},3000);
+setInterval(showNoti,7000);
 
 // viewer
 setInterval(()=>{
-    document.getElementById("viewer-count").innerText = Math.floor(Math.random()*15)+10;
+document.getElementById("viewer-count").innerText=Math.floor(Math.random()*15)+10;
 },5000);
-
 </script>
 
 </body>
