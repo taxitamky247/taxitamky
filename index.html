@@ -4,28 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Taxi Tam Kỳ - Xe Quay Đầu Đà Nẵng Giá Rẻ</title>
+<title>Taxi Tam Kỳ - Xe Quay Đầu Đà Nẵng</title>
 
-<meta name="description" content="Taxi Tam Kỳ đi Đà Nẵng giá rẻ, xe quay đầu chỉ từ 300k. Gọi ngay 0904000047 có xe liền 5 phút">
+<meta name="description" content="Taxi Tam Kỳ đi Đà Nẵng giá rẻ, gọi 0904000047 có xe ngay">
 
 <style>
 body {
     margin: 0;
     font-family: Arial;
-    background: linear-gradient(135deg, #000, #111);
     color: white;
     text-align: center;
+
+    background: 
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* HEADER */
 .header {
     padding: 20px;
     border-bottom: 2px solid gold;
-}
-
-.header h1 {
-    color: gold;
-    font-size: 26px;
 }
 
 /* BUTTON */
@@ -42,11 +44,11 @@ body {
 .call {
     background: gold;
     color: black;
+    animation: rung 0.7s infinite;
 }
 
 .zalo {
     background: #0084ff;
-    color: white;
 }
 
 /* RUNG */
@@ -58,29 +60,33 @@ body {
     100% {transform: rotate(0);}
 }
 
-.ring {
-    animation: rung 0.6s infinite;
+/* FORM */
+.form {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
 }
 
 /* PRICE */
 .price {
-    margin: 30px auto;
+    margin: 20px auto;
     width: 90%;
     max-width: 500px;
     border: 2px solid gold;
     border-radius: 12px;
     overflow: hidden;
-}
-
-.price div {
-    padding: 14px;
-    border-bottom: 1px solid #333;
-}
-
-.price div:first-child {
-    background: gold;
-    color: black;
-    font-weight: bold;
+    background: rgba(0,0,0,0.6);
 }
 
 /* FLOAT */
@@ -96,18 +102,11 @@ body {
     padding: 16px;
     border-radius: 50%;
     font-size: 20px;
-    text-align: center;
 }
 
 .float-call {
     background: red;
-    color: white;
     animation: rung 0.8s infinite;
-}
-
-.float-zalo {
-    background: blue;
-    color: white;
 }
 
 /* POPUP */
@@ -120,7 +119,6 @@ body {
     color: black;
     padding: 15px;
     display: none;
-    font-weight: bold;
 }
 </style>
 </head>
@@ -128,46 +126,60 @@ body {
 <body>
 
 <div class="header">
-    <h1>🚖 Taxi Tam Kỳ - Quảng Nam</h1>
+    <h1>🚖 TAXI TAM KỲ - QUẢNG NAM</h1>
     <p>Xe Quay Đầu Tam Kỳ ⇆ Đà Nẵng</p>
 </div>
 
-<h2>📞 Gọi xe có ngay sau 5 phút</h2>
+<h2>📞 Gọi là có xe sau 5 phút</h2>
 
-<a href="tel:0904000047" class="btn call ring">📞 Gọi ngay</a>
+<a href="tel:0904000047" class="btn call">📞 Gọi ngay</a>
 <a href="https://zalo.me/0904000047" class="btn zalo">💬 Zalo</a>
+
+<!-- FORM -->
+<div class="form">
+    <h3>📩 Đặt xe nhanh</h3>
+    <input type="text" id="name" placeholder="Tên của bạn">
+    <input type="text" id="phone" placeholder="Số điện thoại">
+    <button class="btn call" onclick="sendZalo()">Gửi đặt xe</button>
+</div>
 
 <!-- BẢNG GIÁ -->
 <div class="price">
-    <div>💰 BẢNG GIÁ TRỌN GÓI</div>
-    <div>25km: 300.000đ</div>
-    <div>30km: 350.000đ</div>
-    <div>35km: 400.000đ</div>
-    <div>40km: 450.000đ</div>
-    <div>45km: 500.000đ</div>
-    <div>50km: 550.000đ</div>
-    <div>60km: 600.000đ</div>
+    <div>25km: 300K</div>
+    <div>30km: 350K</div>
+    <div>35km: 400K</div>
+    <div>40km: 450K</div>
+    <div>45km: 500K</div>
+    <div>50km: 550K</div>
+    <div>60km: 600K</div>
 </div>
 
-<h3>🔥 Cam kết rẻ hơn thị trường 10%</h3>
-<p>✔ Xe riêng – không ghép khách</p>
-<p>✔ Đón tận nơi – chạy ngay</p>
+<!-- MAP -->
+<div style="margin:20px">
+<iframe src="https://maps.google.com/maps?q=Tam%20Ky&t=&z=13&ie=UTF8&iwloc=&output=embed" width="90%" height="250"></iframe>
+</div>
 
-<!-- FLOAT BUTTON -->
+<!-- FLOAT -->
 <div class="float">
     <a href="tel:0904000047" class="float-call">📞</a>
-    <a href="https://zalo.me/0904000047" class="float-zalo">💬</a>
 </div>
 
 <!-- POPUP -->
 <div class="popup" id="popup">
-🔥 Giảm ngay 50K cho khách gọi hôm nay - Gọi ngay!
+🔥 Giảm 50K hôm nay - Gọi ngay!
 </div>
 
 <script>
+function sendZalo(){
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var text = "Đặt xe: " + name + " - " + phone;
+    window.open("https://zalo.me/0904000047?text=" + encodeURIComponent(text));
+}
+
 setTimeout(function(){
     document.getElementById("popup").style.display = "block";
-}, 5000);
+}, 4000);
 </script>
 
 </body>
